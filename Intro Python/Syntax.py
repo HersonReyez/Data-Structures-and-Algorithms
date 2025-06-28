@@ -47,11 +47,13 @@ print()
 ## Listas ##
 listEmpty = list() # Lista vacia
 listIni = [0] * 10 # Lista con 10 ceros
-frutas = ["uva", "banana", "manzana"] #Lista con contenido
+frutas = ["uva", "banana", "manzana", "fresa"] #Lista con contenido
 
 ## Funciones de lista
 frutas.append("naranja") # Agrega al final
 frutas.pop() # Elimina el último elemento
+frutas.pop(1) # Elimina el segundo elemento de la 
+frutas.pop("fresa") # Elimina elemento especifico
 
 ## Read a list 
 listaData = input("Ingresa valores Lista: ")

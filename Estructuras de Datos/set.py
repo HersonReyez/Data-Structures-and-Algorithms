@@ -17,19 +17,20 @@ class Set:
             self.size += 1
 
     def delete(self, element):
-        if self.firstNode.value == element:
-            self.firstNode = self.firstNode.nextNode
-        else:
-            currentNode = self.firstNode
-            for i in range(self.size):
-                if currentNode.nextNode.value == element:
-                    break
-                currentNode = currentNode.nextNode
+        if self.size > 0:
+            if self.firstNode.value == element:
+                self.firstNode = self.firstNode.nextNode
+                self.size -= 1
+            else:
+                currentNode = self.firstNode
+                for i in range(self.size - 1):
+                    if currentNode.nextNode.value == element:
+                        currentNode.nextNode = currentNode.nextNode.nextNode
+                        self.size -= 1
+                        break
+                    currentNode = currentNode.nextNode
 
-            currentNode.nextNode = currentNode.nextNode.nextNode
             
-        self.size -= 1
-
     def contains(self, element):
         currentNode = self.firstNode
         for i in range(self.size):
@@ -47,8 +48,9 @@ class Set:
 
 conjunto = Set()
 conjunto.add(1)
-conjunto.add(2)
+conjunto.add(1)
 conjunto.add(2)
 conjunto.add(3)
+conjunto.add(4)
 conjunto.delete(3)
 conjunto.printSet()

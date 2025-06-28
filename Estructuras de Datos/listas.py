@@ -12,36 +12,64 @@ class LinkedList:
         self.size = 0
         self.firstNode = None 
 
-    # add in position
-    def add(self, position, element):
-        if position == 0:
-            self.firstNode = Node(element, self.firstNode)
-        else:
-            currentNode = self.firstNode
-            for i in range(position - 1):
-                currentNode = currentNode.nextNode
-            currentNode.nextNode = Node(element, currentNode.nextNode)
-
+    # the way of add more efficent is add elements in first position
+    def add(self, element):
+        self.firstNode = Node(element, self.firstNode)
         self.size += 1
 
-    # delete in position
-    def delete(self, position):
-        if position == 0:
-            self.firstNode = self.firstNode.nextNode
+    # add in position
+    def addPos(self, position, element):
+        if position <= self.size:
+            if position == 0:
+                self.firstNode = Node(element, self.firstNode)
+            else:
+                currentNode = self.firstNode
+                for i in range(position - 1):
+                    currentNode = currentNode.nextNode
+                currentNode.nextNode = Node(element, currentNode.nextNode)
+            self.size += 1
         else:
-            currentNode = self.firstNode
-            for i in range(position - 1):
-                currentNode = currentNode.nextNode
-            currentNode.nextNode = currentNode.nextNode.nextNode
+            print("Invalid position")
 
-        self.size -= 1
+    # delete one element specific of list 
+    def delete(self, element):
+        if self.size > 0:
+            if self.firstNode.value == element:
+                self.firstNode = self.firstNode.nextNode
+                self.size -= 1
+            else:
+                currentNode = self.firstNode
+                for i in range(self.size - 1):
+                    if currentNode.nextNode.value == element:
+                        currentNode.nextNode = currentNode.nextNode.nextNode
+                        self.size -= 1
+                        break
+                    currentNode = currentNode.nextNode
+        
+            
+    # delete in position
+    def deletePos(self, position):
+        if position < self.size:
+            if position == 0:
+                self.firstNode = self.firstNode.nextNode
+            else:
+                currentNode = self.firstNode
+                for i in range(position - 1):
+                    currentNode = currentNode.nextNode
+                currentNode.nextNode = currentNode.nextNode.nextNode
+            self.size -= 1
+        else:
+            print("Invalid position")
 
     # get vaule in position 
     def get(self, position):
-        currentNode = self.firstNode
-        for i in range(position):
-            currentNode = currentNode.nextNode
-        return currentNode.value
+        if position < self.size:
+            currentNode = self.firstNode
+            for i in range(position):
+                currentNode = currentNode.nextNode
+            return currentNode.value
+        else:
+            print("Invalid position")
 
     def printList(self):
         currentNode = self.firstNode
@@ -52,15 +80,14 @@ class LinkedList:
 
 ## Example ##
 lista = LinkedList()
-lista.add(0, 20)
-lista.add(1, 25)
-lista.add(2, 27)
-lista.add(3, 30)
-lista.delete(3)
-
+lista.add(30)
+lista.add(40)
+lista.addPos(1,10)
 lista.printList()
-
-
+print()
+lista.delete(10)
+lista.deletePos(0)
+lista.printList()
 
 
 
