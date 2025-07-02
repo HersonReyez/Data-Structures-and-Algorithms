@@ -52,12 +52,40 @@ frutas = ["uva", "banana", "manzana", "fresa"] #Lista con contenido
 ## Funciones de lista
 frutas.append("naranja") # Agrega al final
 frutas.pop() # Elimina el último elemento
-frutas.pop(1) # Elimina el segundo elemento de la 
-frutas.pop("fresa") # Elimina elemento especifico
+frutas.pop(1) # Elimina el segundo elemento de la
+frutas.remove("fresa") # Elimina elemento especifico
+print(frutas)
+
 
 ## Read a list 
-listaData = input("Ingresa valores Lista: ")
+print("Ingresa valores lista. Ejemplo: 1 2 3")
+listaData = input()
 lista = list(map(int, listaData.split()))
+
+
+## Matrices ## 
+# Inicializada
+matrix = [[1,2,3], [4,5,6], [7,8,9]]
+
+# Vacia
+matrixEmpty = []
+rows = 2
+col = 2
+
+print("Add vaules of matrix:")
+# scan matrix
+for i in range(rows):
+    row = []
+    for j in range(col):
+        row.append(int(input()))
+    matrixEmpty.append(row)
+
+print("Matrix:")
+# print matrix
+for i in range(rows):
+    for j in range(col):
+        print(matrixEmpty[i][j], end=" ")
+    print()
 
 
 ## Cadenas ##
@@ -65,13 +93,22 @@ cadena = "Hola Mundo"
 cadena.replace("Hola", "Adios") # remplazar
 cadena.find("Mundo") #buscar
 
+
 ## Diccionario ##
 # Agrupar datos sin lógica adicional, algo simple y rápido
+# Usa internamete una tabla Hash
 Animal = {
     "nombre": "Perro",
     "clase": "mamifero"
 }
 print(Animal["nombre"], "es un animal", Animal["clase"])
+
+Nombres = {
+    "pedro": 1,
+    "oscar": 3
+}
+Nombres["maria"] = 0 #insertar
+Nombres["maria"] += 1 #Actualizar 
 
 
 ## Conjuntos ##
@@ -98,6 +135,10 @@ def sum20(numero):
 
 valor = sum20(valor)
 
+
+########################################################################################
+
+
 ## Librerias ## 
 import math
 print("la raiz de 16 es", math.sqrt(16))
@@ -106,8 +147,6 @@ print("la raiz de 16 es", math.sqrt(16))
 import random as r
 print("Integer aleatorio entre [0, 10]:", r.randint(0,10))
 
-
-########################################################################################
 
 ## Clases ##
 class Persona:
