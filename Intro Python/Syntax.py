@@ -33,16 +33,24 @@ if suma > 5 and bandera:
 ## Bucles ##
 # While
 contador = 0
-while contador < 5:
+while contador < 6:
     print(contador, end=" ") #el espacio vacio quita el salto de linea
     contador +=1
 print()
 
 # For
-for i in range(5):
+# range(start, end, increment)
+for i in range(6):
     print(i, end=" ")
 print()
 
+for i in range(5, 11):
+    print(i, end=" ")
+print()
+
+for i in range(0, 51, 10):
+    print(i, end=" ")
+print()
 
 ## Listas ##
 listEmpty = list() # Lista vacia
