@@ -71,23 +71,40 @@ class LinkedList:
         else:
             print("Invalid position")
 
+    # print list
     def printList(self):
         currentNode = self.firstNode
         for i in range(self.size):
             print(currentNode.value)
             currentNode = currentNode.nextNode
-            
+
+    # Functions print list using recursion
+    def printListRec(self, node):
+        if not node:
+            return
+        print(node.value)
+        lista.printListRec(node.nextNode)
+
+    def printListReverse(self, node):
+        if not node:
+            return
+        lista.printListReverse(node.nextNode)
+        print(node.value)
+
 
 ## Example ##
 lista = LinkedList()
 lista.add(30)
 lista.add(40)
+lista.add(50)
+lista.add(60)
 lista.addPos(1,10)
 lista.printList()
 print()
 lista.delete(10)
 lista.deletePos(0)
 lista.printList()
-
-
-
+print()
+lista.printListRec(lista.firstNode)
+print()
+lista.printListReverse(lista.firstNode)
