@@ -48,23 +48,6 @@ for i in range(n):
     print(-maxHeap [i], end=" ")
 print()
 
-
-## heap Sort - O(n log n) 
-# NOTE: o(1) Space is possible via swapping, but this is complex
-def heapsort(array):
-    heapq.heapify(array)
-    n = len(array)
-    newList = [0] * n
-
-    for i in range(n):
-        vauleMin = heapq.heappop(array)
-        newList[i] = vauleMin
-    return newList
-
-unorderedList = [1, 5, 2, 0, 2, 4]
-orderedList = heapsort(unorderedList)
-print("list ordered with Heap Sort:",orderedList)
-
 ## Build heap from scratch - Time: O(n log n)
 vaules = [-4, 3, 1, 0, 2, 5, 10, 8 ,12, 9]
 heap = []
@@ -86,3 +69,21 @@ for k, v in counter.items():
     heapq.heappush(heapTuples, (v,k))
 
 print("Heap with tuples (frecuency, vaule): ", heapTuples)
+
+
+## Heap Sort ##
+# heap Sort - O(n log n) 
+# NOTE: o(1) Space is possible via swapping, but this is complex
+def heapsort(array):
+    heapq.heapify(array)
+    n = len(array)
+    newList = [0] * n
+
+    for i in range(n):
+        vauleMin = heapq.heappop(array)
+        newList[i] = vauleMin
+    return newList
+
+unorderedList = [1, 5, 2, 0, 2, 4]
+orderedList = heapsort(unorderedList)
+print("list ordered with Heap Sort:",orderedList)
