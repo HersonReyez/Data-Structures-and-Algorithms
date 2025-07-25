@@ -13,7 +13,7 @@ def merge_sort(array):
     left = merge_sort(left)
     right = merge_sort(right)
 
-    l, r = 0, 0 
+    l, r = 0, 0
     L_len = len(left)
     R_len = len(right)
     sortedArray = [0] * n

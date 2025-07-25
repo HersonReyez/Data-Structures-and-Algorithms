@@ -105,6 +105,8 @@ print("puntos maximos", default["Puntos"])
 
 
 
+
+
 ## Clases ##
 class Persona:
     def __init__(self, nombre, edad):
@@ -119,7 +121,6 @@ personas = [
 ]
 
 
-
 ## Funciones integradas ##
 # Potencia
 print("Potencia 2^3:", pow(2,3))
@@ -132,20 +133,26 @@ suma_edades = sum(persona.edad for persona in personas)
 print("La suma de las edades es", suma_edades)
 
 
-
-## Ordenamiento ##
-# No modificando la lista original y alrevez
+## Sorting ##
+# Time complexity is O(n log n) from using Tim Sort
+# Get now sorted array and reverse 
 personas_ordenadas_rev = sorted(personas, key=lambda p: p.edad, reverse=True)
 
-# Imprimir datos personas ordenadas por edad decendiente
 print("Lista de personas Decendente")
 for p in personas_ordenadas_rev:
     print(p.nombre, p.edad)
 
-# Modficando la lista original 
+# In place, modify original list
 personas.sort(key=lambda p: p.edad)
 
-# Imprimir datos personas ordenadas por edad acendente
 print("Lista de personas Acendente")
 for p in personas:
     print(p.nombre, p.edad)
+
+# Sort array of tuples - (pos1, pos2)
+tuples = [(-5,3), (2,1), (-3,-3),(7,2),(2,2)]
+# t[0] sort from pos1 and t[1] sort from pos2
+# if use - sorted reverse
+print("Sorting tuples from second postion and reverse")
+sortedTuples = sorted(tuples, key = lambda t: -t[1])
+print(sortedTuples)

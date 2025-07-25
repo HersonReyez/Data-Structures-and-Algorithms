@@ -14,11 +14,17 @@ edad = int(input("Intoduce tu edad: ")) #Cast
 print("Hola", nombre + "!", "Tienes", edad, "años.")
 
 
+## Assign vaules two multiple variables
+vaule1 = vaule2 = 0 # same vaule
+vaule1, vaule2 = 10, 20 # different vaules
+
+
 ## Operadores ##
 # Aritmeticos +, -, *, /, %
 suma = num1 + num2 
 frase = palabra1 + palabra2
 palabra1 += palabra2 # Concatenacion
+square = 10 ** 2 # Squere number
 
 # Relacionales: <, <=, >, >=, !=, ==
 if edad >= 18:
