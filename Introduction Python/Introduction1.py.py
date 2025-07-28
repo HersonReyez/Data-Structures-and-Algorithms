@@ -25,6 +25,7 @@ suma = num1 + num2
 frase = palabra1 + palabra2
 palabra1 += palabra2 # Concatenacion
 square = 10 ** 2 # Squere number
+intDivision = 7 // 2 # Division Entera 
 
 # Relacionales: <, <=, >, >=, !=, ==
 if edad >= 18:
@@ -87,6 +88,16 @@ listaData = input()
 lista = list(map(int, listaData.split()))
 lista.sort() # Ordenamiento
 print("Lista ordenada",lista)
+
+# Crear una copia de una lista 
+copia = lista[:]  # Copia completa de la lista
+middle = len(lista) // 2 # obtiene la mitad de la lista
+left = lista[:middle] # Copia la lista de 0 hasta middle
+right= lista[:middle] # Copia desde el índice m hasta el final
+last = lista[-1] # Copia el último elemento
+pop = lista[:-1] # Copia todos menos el último elemento
+reverse = lista[::-1] # Copia reversa de la lista
+
 
 
 ## Cadenas ##
