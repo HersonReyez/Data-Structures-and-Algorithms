@@ -23,5 +23,15 @@ def backtrack(i):
     sol.pop()
 
 backtrack(0)
+print(res)
 
+
+## Iterative Version
+def subsets(nums):
+    res = [[]]
+    for num in nums:
+        res += [curr + [num] for curr in res]
+    return res
+
+res = subsets(nums)
 print(res)
