@@ -8,3 +8,5 @@ Recurses used in my codes:
 [ESTRUCTURAS de DATOS | Explicadas con DIBUJOS :)](https://www.youtube.com/watch?v=XLAlSZCBRIQ&list=PLSHyccnBcXI8K_OAVHSMzLaO_fpGU9AkO)
 
 [Estructuras de Datos](https://www.youtube.com/watch?v=Df-sgxGzyTg&list=PLfBtpqIBIz7rftekZzTw1DF8gIWetK8pH&index=1)
+
+[Fundamental DSA Theory](https://www.youtube.com/watch?v=aWKEBEg55ps&list=PLKYEe2WisBTGq9T0wPulXz1otUsVeOGey&index=2)
