@@ -1,4 +1,4 @@
-## Repository hers 
+## Data Structures and Algorithms (DSA)
 In this repository i saves my codes that i do while practice python :)
 
 Recurses used in my codes:
